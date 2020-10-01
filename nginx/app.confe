@@ -1,0 +1,19 @@
+server {
+  listen  80;
+  server_name host_ip_address;
+
+  index index index.html index.js;
+  root /usr/share/nginx/html;
+
+  location / {
+    root /usr/share/nginx/html;
+  }
+
+  location /flask/denoise/ {
+    proxy_pass http://flask:8000/denoise;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+  }
+
+}

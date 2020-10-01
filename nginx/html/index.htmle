@@ -1,0 +1,10 @@
+</html>
+<head>
+</head>
+  <body>
+    <div>
+      <h1>Image analysis</h1>
+      <p><a href="http://host_ip_address/flask/denoise/">click me to check flask app</a></p>
+    </div>
+  </body>
+</html>

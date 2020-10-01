@@ -1,0 +1,57 @@
+version: '3.5'
+services:
+
+  nginx:
+    build: ./nginx
+    image: nginx-custom
+    container_name: nginx
+    networks:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - flask
+    restart: unless-stopped
+
+  postgres:
+    build: ./postgres
+    image: postgres-custom
+    container_name: postgres
+    volumes:
+      - type: volume
+        source: postgres-data
+        target: /var/lib/postgresql/data
+    networks:
+      - app
+    restart: unless-stopped
+
+  flask:
+    build: ./flask
+    image: flask-custom
+    container_name: flask
+    networks:
+      - app
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  python:
+    build: ./python
+    image: python-sql-insert
+    container_name: insert-image
+    networks:
+      - app
+    depends_on:
+      - postgres
+    restart: "no"
+
+volumes:
+  postgres-data:
+
+networks:
+  app:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.19.19.1/27
