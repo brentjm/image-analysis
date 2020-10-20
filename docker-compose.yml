@@ -6,12 +6,13 @@ services:
     image: nginx-custom
     container_name: nginx
     networks:
-      - app
+      - image-app
     ports:
       - "80:80"
       - "443:443"
     depends_on:
       - flask
+      - postgres
     restart: unless-stopped
 
   postgres:
@@ -23,7 +24,7 @@ services:
         source: postgres-data
         target: /var/lib/postgresql/data
     networks:
-      - app
+      - image-app
     restart: unless-stopped
 
   flask:
@@ -31,7 +32,7 @@ services:
     image: flask-custom
     container_name: flask
     networks:
-      - app
+      - image-app
     depends_on:
       - postgres
     restart: unless-stopped
@@ -41,7 +42,7 @@ services:
     image: python-sql-insert
     container_name: insert-image
     networks:
-      - app
+      - image-app
     depends_on:
       - postgres
     restart: "no"
@@ -50,8 +51,8 @@ volumes:
   postgres-data:
 
 networks:
-  app:
+  image-app:
     ipam:
       driver: default
       config:
-        - subnet: 172.19.19.1/27
+        - subnet: 172.19.31.1/27

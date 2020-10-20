@@ -8,7 +8,7 @@ class Database(object):
     def __init__(self):
         self._connection = None
         self._cursor = None
-        self._index = 10001
+        self._index = 10012
         self.connect_to_database()
 
 
