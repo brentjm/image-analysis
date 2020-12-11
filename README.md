@@ -29,13 +29,13 @@ This step will connect to Postgres database, convert and load the image into
 numpy array and insert into DB
 
 1. Navigate to python directory
-`cd python`
+### `cd python`
 2. Copy all the images which you want to store in DB and rename them in the below format(starting from 0 to n)
 {n}_test.png
 3. Build the docker containers
-`docker-compose build`
+### `docker-compose build`
 4. Run docker-compose again
-`docker-compose up -d`
+### `docker-compose up -d`
 
 ### Steps to setup UI App (Only required if you make any change in UI and want to deploy latest build)
 1. Go to ui directory and create the UI App build
