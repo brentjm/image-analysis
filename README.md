@@ -17,6 +17,7 @@ proxies a PostgreSQL database, which the images are stored.
 3. run post-setup.sh (configures running containers)
 `$./post-setup.sh`
 4. create a web app and place in nginx/html/index.html (See nginx/Dockerfile)
+### Already copied the UI build in hginx/html directory, hence App should be working with that build
 
 # Author
 
