@@ -22,6 +22,34 @@ proxies a PostgreSQL database, which the images are stored.
 
 **Brent Maranzano**
 
+##----------------------------------------------------------------------------------------------##
+##-------------------Additional steps to setup the Image data and UI App
+##----------------------------------------------------------------------------------------------##
+
+## Steps to populate image data in DB (Only required if you want to populate new images in DB else it will be populated with the default images)
+## Connect to Postgres database
+## Convert and load the image into numpy array and insert into DB
+1. Navigate to python directory
+`cd python`
+2. Copy all the images which you want to store in DB and rename them in the below format(starting from 0 to n)
+{i}_test.png
+3. Build the docker containers
+`docker-compose build`
+4. Run docker-compose again
+`docker-compose up -d`
+
+## Steps to setup UI App (Only required if you make any change in UI else UI will be populated with the default build)
+1. Navigate to UI directory and create the build
+`cd ui`
+`npm i`
+`npm audit fix`
+`npm run build`
+2. copy all the files from ui/build directory and place inside nginx/html directory
+3. Build and run the app with Compose
+`docker-compose build`
+`docker-compose up -d`
+4. Now your UI should be accessible at http://127.0.0.1/
+
 # License
 
 This project is licensed under the MIT License - see the LICENSE file for details

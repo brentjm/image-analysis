@@ -1,0 +1,110 @@
+.listItem ul {list-style-type: none;margin: 0px; padding: 0px;}
+.listItem ul li { padding: 10px 20px; border-bottom: 1px solid #eee; }
+.listItem ul li {cursor: pointer;}
+.listItem ul li:last-child{border-bottom: 0px;}
+
+.denoiseBtn{
+  float: right;
+    top: 10px;
+    position: relative;
+}
+
+.bottom-label{
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 24.5%;
+  bottom: 11px;
+}
+
+.denoise-bottom-label{
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 70.5%;
+  bottom: 20px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul#menu {
+  display: inline-block;
+  padding: 0px;
+}
+
+ul#menu li {
+  float: left;
+  margin: 15px 5px;
+}
+
+.imgcontainer{
+  width: 228px;
+  height: 220px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: move;
+}
+
+.close {
+  font-size: 2rem;
+  color: #fff;
+  opacity: 1;
+  line-height: 1.2;
+  position: absolute;
+  top: 3px;
+  right: 10px;
+}
+
+.close:hover {
+  font-size: 2rem;
+  color: #fff;
+  opacity: 1;
+}
+
+.activeContainer {
+  background-color: #5e84ff;
+}
+
+.imageNew {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.imageContainer {
+  height: 168px;
+  background: #fff;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.denoiseContainer {
+  background: green;
+  color: #fff;
+  text-align: center;
+  height: 30px;
+  font-size: 12px;
+  position: absolute;
+  width: 100%;
+}
+
+.imageHeader {
+  width: 100%;
+  height: 50px;
+}
+
+
+.imageWrapper {
+  min-height: 520px;
+  min-width: 900px;
+}
