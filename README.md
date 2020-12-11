@@ -14,9 +14,11 @@ proxies a PostgreSQL database, which the images are stored.
 `./pre-setup.sh`
 2. run docker-compose
 `$docker-compose up -d`
-3. run post-setup.sh (configures running containers)
-`$./post-setup.sh`
-4. create a web app and place in nginx/html/index.html (See nginx/Dockerfile)
+3. Build the docker containers
+##### `docker-compose build`
+4 Run docker-compose again
+##### `docker-compose up -d`
+5. create a web app and place in nginx/html/index.html (See nginx/Dockerfile)
 
 # Author
 
