@@ -39,7 +39,7 @@ numpy array and insert into DB
 
 ### Steps to setup UI App (Only required if you make any change in UI and want to deploy latest build)
 1. Go to ui directory and create the UI App build
-`cd ui`
+#### `cd ui`
 `npm i`
 `npm audit fix`
 `npm run build`
