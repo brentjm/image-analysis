@@ -39,14 +39,14 @@ numpy array and insert into DB
 
 ### Steps to setup UI App (Only required if you make any change in UI and want to deploy latest build)
 1. Go to ui directory and create the UI App build
-`cd ui`
-`npm i`
-`npm audit fix`
-`npm run build`
+### `cd ui`
+### `npm i`
+### `npm audit fix`
+### `npm run build`
 2. copy all the files from ui/build directory and place inside nginx/html directory
 3. Build and run the app with Compose
-`docker-compose build`
-`docker-compose up -d`
+### `docker-compose build`
+### `docker-compose up -d`
 4. Now your UI should be accessible at http://127.0.0.1/
 
 # License
