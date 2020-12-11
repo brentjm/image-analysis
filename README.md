@@ -37,7 +37,7 @@ numpy array and insert into DB
 4. Run docker-compose again
 `docker-compose up -d`
 
-### Steps to setup UI App (Only required if you make any change in UI else UI will be populated with the default build)
+### Steps to setup UI App (Only required if you make any change in UI and want to deploy latest build)
 1. Go to ui directory and create the UI App build
 `cd ui`
 `npm i`
