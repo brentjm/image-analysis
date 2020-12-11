@@ -17,7 +17,7 @@ proxies a PostgreSQL database, which the images are stored.
 ##### `docker-compose build`
 4 Run docker-compose up
 ##### `docker-compose up -d`
-5. create a web app and place in nginx/html/index.html (See nginx/Dockerfile) -Not required if you want to build with default UI
+5. create a web app and place in nginx/html/index.html (This step is not required as checked-in code already has UI code inside nginx/html directory)
 
 # Author
 
