@@ -22,9 +22,9 @@ proxies a PostgreSQL database, which the images are stored.
 
 **Brent Maranzano**
 
-### Additional steps to setup the Image data and UI App
+# Additional steps to setup the Image data and UI App
 
-# Steps to populate image data in DB (Only required if you want to populate new images in DB else it will be populated with the default images)
+### Steps to populate image data in DB (Only required if you want to populate new images in DB else it will be populated with the default images)
 This step will connect to Postgres database, convert and load the image into
 numpy array and insert into DB
 
@@ -37,7 +37,7 @@ numpy array and insert into DB
 4. Run docker-compose again
 `docker-compose up -d`
 
-# Steps to setup UI App (Only required if you make any change in UI else UI will be populated with the default build)
+### Steps to setup UI App (Only required if you make any change in UI else UI will be populated with the default build)
 1. Go to ui directory and create the UI App build
 `cd ui`
 `npm i`
