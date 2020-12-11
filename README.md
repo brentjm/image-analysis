@@ -17,6 +17,7 @@ proxies a PostgreSQL database, which the images are stored.
 ##### `docker-compose build`
 4 Run docker-compose up
 ##### `docker-compose up -d`
+5. Now your UI should be up and running at http://127.0.0.1/
 
 # Author
 
