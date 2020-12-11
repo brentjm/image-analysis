@@ -28,27 +28,27 @@ proxies a PostgreSQL database, which the images are stored.
 This step will connect to Postgres database, convert and load the image into
 numpy array and insert into DB
 
-1. Navigate to python directory
+Navigate to python directory
 ##### `cd python`
-2. Copy all the images which you want to store in DB and rename them in the below format(starting from 0 to n)
+Copy all the images which you want to store in DB and rename them in the below format(starting from 0 to n)
 {n}_test.png
-3. Build the docker containers
+Build the docker containers
 ##### `docker-compose build`
-4. Run docker-compose again
+Run docker-compose again
 ##### `docker-compose up -d`
 
 ### Steps to setup UI App (Only required if you make any change in UI and want to deploy latest build)
 ### Pre-requisite: Node should be installed
-1. Go to ui directory and run following npm commands to create UI App build
+Go to ui directory and run following npm commands to create UI App build
 ##### `cd ui`
 ##### `npm i`
 ##### `npm audit fix`
 ##### `npm run build`
-2. copy all the files from ui/build directory and place inside nginx/html directory
-3. Build and run the app with Compose
+copy all the files from ui/build directory and place inside nginx/html directory
+Build and run the app with Compose
 ##### `docker-compose build`
 ##### `docker-compose up -d`
-4. Now your UI should be accessible at http://127.0.0.1/
+Now your UI should be accessible at http://127.0.0.1/
 
 # License
 
