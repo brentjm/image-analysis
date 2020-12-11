@@ -48,7 +48,7 @@ copy all the files from ui/build directory and place inside nginx/html directory
 Build and run the app with Compose
 ##### `docker-compose build`
 ##### `docker-compose up -d`
-Now your UI should be accessible at http://127.0.0.1/
+Now your UI should be up and running at http://127.0.0.1/
 
 # License
 
