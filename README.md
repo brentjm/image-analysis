@@ -22,13 +22,11 @@ proxies a PostgreSQL database, which the images are stored.
 
 **Brent Maranzano**
 
-##----------------------------------------------------------------------------------------------##
-##-------------------Additional steps to setup the Image data and UI App
-##----------------------------------------------------------------------------------------------##
+## Additional steps to setup the Image data and UI App
 
 ## Steps to populate image data in DB (Only required if you want to populate new images in DB else it will be populated with the default images)
-## Connect to Postgres database
-## Convert and load the image into numpy array and insert into DB
+Connect to Postgres database
+Convert and load the image into numpy array and insert into DB
 1. Navigate to python directory
 `cd python`
 2. Copy all the images which you want to store in DB and rename them in the below format(starting from 0 to n)
