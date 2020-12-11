@@ -24,8 +24,7 @@ proxies a PostgreSQL database, which the images are stored.
 
 # Additional steps to setup the Image data and UI App
 
-### Steps to populate image data in DB
-### (Only required if you want to populate new images in DB else it will be populated with the default images)
+### Steps to populate image data in DB (Only required if you want to populate new images in DB else it will be populated with the default images)
 This step will connect to Postgres database, convert and load the image into
 numpy array and insert into DB
 
@@ -38,8 +37,7 @@ Build the docker containers
 Run docker-compose again
 ##### `docker-compose up -d`
 
-### Steps to setup UI App
-### (Only required if you make any change in UI and want to deploy latest build)
+### Steps to setup UI App (Only required if you make any change in UI and want to deploy latest build)
 ### Pre-requisite: Node should be installed
 Go to ui directory and run following npm commands to create UI App build
 ##### `cd ui`
