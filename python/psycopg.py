@@ -1,5 +1,13 @@
 import psycopg2
+from PIL import Image
 import numpy as np
+
+
+def load_image(infilename):
+    im = Image.open(infilename)
+    np_im = np.array(im)
+    print(np_im.shape)
+    return np_im.tolist()
 
 
 class Database(object):
@@ -8,7 +16,7 @@ class Database(object):
     def __init__(self):
         self._connection = None
         self._cursor = None
-        self._index = 10012
+        self._index = 10001
         self.connect_to_database()
 
 
@@ -57,10 +65,12 @@ class Database(object):
     def populate(self):
         """Insert several test images into the database.
         """
-        for i in range(10):
+        for i in range(7):
             image_name = "test_{}".format(i)
-            image_data = np.random.rand(10,10,10).tolist()
+            image_data = load_image(str(i)+'_test.png')
             self.insert_image(image_name, image_data)
+
+
 
 if __name__ == "__main__":
     database = Database()
