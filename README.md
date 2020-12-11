@@ -12,11 +12,10 @@ proxies a PostgreSQL database, which the images are stored.
 1. clone this repository
 2. run pre-setup.sh (configures the files prior to running docker-compose)
 `./pre-setup.sh`
-2. run docker-compose
-`$docker-compose up -d`
+
 3. Build the docker containers
 ##### `docker-compose build`
-4 Run docker-compose again
+4 Run docker-compose up
 ##### `docker-compose up -d`
 5. create a web app and place in nginx/html/index.html (See nginx/Dockerfile)
 
