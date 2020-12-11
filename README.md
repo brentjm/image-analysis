@@ -38,11 +38,12 @@ numpy array and insert into DB
 #### `docker-compose up -d`
 
 ### Steps to setup UI App (Only required if you make any change in UI and want to deploy latest build)
-1. Go to ui directory and create the UI App build
-#### `cd ui`
-#### `npm i`
-#### `npm audit fix`
-#### `npm run build`
+### Pre-requisite: Node should be installed
+1. Go to ui directory and run following npm commands to create UI App build
+##### `cd ui`
+##### `npm i`
+##### `npm audit fix`
+##### `npm run build`
 2. copy all the files from ui/build directory and place inside nginx/html directory
 3. Build and run the app with Compose
 #### `docker-compose build`
