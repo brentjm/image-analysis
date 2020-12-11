@@ -37,7 +37,7 @@ Build the docker containers
 Run docker-compose again
 ##### `docker-compose up -d`
 
-### Steps to setup UI App (Only required if you make any change in UI and want to deploy latest build)
+### Steps to setup UI App (Only required if you make any change in UI codebase and want to deploy latest build)
 ### Pre-requisite: Node should be installed
 Go to ui directory and run following npm commands to create UI App build
 ##### `cd ui`
